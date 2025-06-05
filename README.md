@@ -58,3 +58,16 @@ If the university uses several email domains in different upper-level domains (f
 
 #### Some universities have their names duplicated in the first and the second line in the respective .txt file in this repository. Shall I put the university name twice in my .txt file to have the domain added?
 No, it's not needed. However, nothing bad happens if you do it, don't worry. It does not affect our decision on your request. 
+
+## Example: Mood Tracker with Google Sheets
+This repository includes a small example demonstrating how to load
+mood tracking data from Google Sheets and produce a graph.
+
+```
+python examples/mood_tracker.py <sheet_key> <worksheet_name> <credentials.json>
+```
+
+The script expects a Google service account credentials file and a sheet
+that contains columns `Date`, `Mood`, `Sleep`, and `Motivation`.
+It will open the spreadsheet, read all rows and plot the three metrics
+over time using `matplotlib`.
